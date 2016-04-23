@@ -114,7 +114,7 @@ func processEnvs(bundledPath: String, sourcePath: String, settingsPath: String, 
         
         let settingsAdjusted = processSettings(settingsPath, availableEnvs: availableEnvs, allowedEnv: allowedEnv)
         if settingsAdjusted == false {
-            print("\(#file):\(#line): Unable to adjust settings bundle")
+//            print("\(#file):\(#line): Unable to adjust settings bundle")
         }
         return settingsAdjusted
     }
@@ -124,7 +124,7 @@ func processEnvs(bundledPath: String, sourcePath: String, settingsPath: String, 
 
 let count = Process.arguments.count
 if count == 1 || count > 5 {
-    print("\(#file):\(#line): Received \(count) arguments, Proper usage: processEnvironments.swift -- [bundledPath] [srcPath] [settingsPath] [allowedEnv]")
+//    print("\(#file):\(#line): Received \(count) arguments, Proper usage: processEnvironments.swift -- [bundledPath] [srcPath] [settingsPath] [allowedEnv]")
     exit(1)
 }
 
@@ -133,11 +133,11 @@ let srcPath = Process.arguments[2]
 let settingsPath = Process.arguments[3]
 let allowedEnv: String? = (count != 5 ? nil : Process.arguments[4])
 
-if (processEnvs(path, sourcePath: srcPath, settingsPath: settingsPath, allowedEnv:allowedEnv) == true)
-{
-    exit (0)
-}
-else
-{
-    exit (1)
-}
+//if (processEnvs(path, sourcePath: srcPath, settingsPath: settingsPath, allowedEnv:allowedEnv) == true)
+//{
+//    exit (0)
+//}
+//else
+//{
+//    exit (1)
+//}
